@@ -1,0 +1,34 @@
+package com.sushma.gi.service;
+
+import java.util.List;
+
+import com.sushma.gi.model.music;
+
+
+public interface MusicService {
+
+	List<music> loadAll();
+
+	public List<music> getAll();
+
+	public music get(int id);
+
+	public List<music> getByTitle(String keyword);
+
+	public List<music> getByDescription(String keyword);
+
+	public List<music> getByTitleOrDescription(String keyword);
+
+	public String save(Music, music);
+
+	public String update(int id, String title,  String description);
+
+	public String delete(int id);
+
+	public Music get(List<music> music, int id);
+
+	/**
+	 * Write the database of books to disk, upon exiting the application
+	 */
+	public boolean save();
+}
