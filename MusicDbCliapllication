@@ -1,0 +1,14 @@
+package com.sushma.gi;
+
+import com.sushma.gi.controller.MusicController;
+
+
+public class MusicDBCliapplication {
+
+	public static void main(String[] args) {
+
+		MusicController musicController = new MusicController();
+		musicController.run();
+
+	}
+}
