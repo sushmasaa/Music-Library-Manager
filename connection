@@ -1,0 +1,37 @@
+package com.sushma.gi.connection;
+
+import java.io.File;
+import java.io.IOException;
+
+
+public class FileConnection {
+
+	// static File file = null;
+
+	public static File getFile() {
+		// Get current user home directory
+		String directory = System.getProperty("user.home");
+		String fileName = "music.txt";
+		String absolutePath = directory + File.separator + fileName;
+
+		// System.out.println("absolutePath: " + absolutePath);
+
+		// Using file pointer creating the file.
+		File file = new File(absolutePath);
+
+		if (!file.exists()) {
+			// System.out.println("File Doesn't Exist");
+			try {
+				// Create a new file if not exists.
+				file.createNewFile();
+			} catch (IOException e) {
+				// e.printStackTrace();
+				System.out.println(e);
+			}
+		}
+
+		return file;
+
+	}
+
+}
